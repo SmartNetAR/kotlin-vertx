@@ -18,7 +18,6 @@ import io.vertx.redis.RedisClient
 import io.vertx.redis.RedisOptions
 import java.util.stream.Collectors
 
-/*
 class SingleApplicationVerticle : AbstractVerticle() {
     private var redis: RedisClient? = null
     private val HTTP_HOST = "0.0.0.0"
@@ -196,11 +195,11 @@ class SingleApplicationVerticle : AbstractVerticle() {
         }
     }
 
-    private fun wrapObject(todo: Todo, context: RoutingContext): Todo? {
+    private fun wrapObject(todo: Todo, context: RoutingContext): Todo {
         val id = todo.getId()
-        if (id > Todo.getIncId()) {
+        /*if (id > Todo.getIncId()) {
             Todo.setIncIdWith(id)
-        } else todo.setIncId(id)
+        } else todo.setIncId(id)*/
         todo.setUrl(context.request().absoluteURI() + "/" + todo.getId())
         return todo
     }
@@ -209,4 +208,4 @@ class SingleApplicationVerticle : AbstractVerticle() {
         response.setStatusCode(StatusCode).end()
     }
 
-}*/
+}
