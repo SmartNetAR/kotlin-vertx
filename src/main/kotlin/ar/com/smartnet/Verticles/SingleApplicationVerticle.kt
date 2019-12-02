@@ -18,7 +18,7 @@ import io.vertx.redis.RedisClient
 import io.vertx.redis.RedisOptions
 import java.util.stream.Collectors
 
-
+/*
 class SingleApplicationVerticle : AbstractVerticle() {
     private var redis: RedisClient? = null
     private val HTTP_HOST = "0.0.0.0"
@@ -209,4 +209,4 @@ class SingleApplicationVerticle : AbstractVerticle() {
         response.setStatusCode(StatusCode).end()
     }
 
-}
+}*/

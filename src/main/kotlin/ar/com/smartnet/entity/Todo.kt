@@ -8,7 +8,8 @@ import java.util.concurrent.atomic.AtomicInteger
 @DataObject(generateConverter = true)
 data class Todo (val id: Int, val title: String, val completed: Boolean, val order: Int, val url: String) {
 
-
+}
+/*
 
     companion object {
         val acc = AtomicInteger(0) // counter
@@ -48,4 +49,4 @@ data class Todo (val id: Int, val title: String, val completed: Boolean, val ord
 
 
 
-}
+}*/
