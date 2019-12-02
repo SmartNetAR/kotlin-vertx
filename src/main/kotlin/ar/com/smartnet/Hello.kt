@@ -22,18 +22,18 @@ fun main(args: Array<String>) {
                 .end("Ended")
         }
 
-    router.get("/json/:name")
+    router.get(API_GET)
         .handler { routingContext ->
             val request = routingContext.request()
-            val name = request.getParam("name")
+            val todoID = request.getParam("todoId")
             val response = routingContext.response()
             response.putHeader("content-type", "application/json")
                 .setChunked(true)
-                .write(Json.encodePrettily(ResponseObj(name)))
+                .write(Json.encodePrettily(ResponseObj(todoID)))
                 .end()
         }
 
-    router.get("/todo")
+    router.get(API_LIST_ALL)
         .handler { routingContext ->
             val response = routingContext.response()
             val todo = Todo(1,"titulo", true, 1, "1/titulo")
@@ -49,4 +49,4 @@ fun main(args: Array<String>) {
 }
 
 
-data class ResponseObj(var name: String = "")
+data class ResponseObj(var todoID: String = "")
